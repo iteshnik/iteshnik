@@ -1,1 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+@import "stylesheets/utils";
+@import "stylesheets/fonts";
+@import "stylesheets/normalize";
+@import "stylesheets/global";
+@import "stylesheets/mixins/icons";
+@import "stylesheets/about";
+
+// @import "../../node_modules/lightgallery/scss/lightgallery";
+
+html,
+body {
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
+    Lucida Grande, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+  background: linear-gradient(#f0f0f0, #cacaca);
+}
+
+@include media-breakpoint-down(sm) {
+}
+@include media-breakpoint-down(md) {
+}
+@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-down(lg) {
+}
+a {
+  color: #00408a;
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #00408a 0%,
+    #0173d6 51%,
+    #00408a 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 10px 10px 30px #ababab, -10px -10px 30px #eee;
+  border-radius: 1rem;
+  display: block;
+  text-decoration: none;
+  &:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+  }
+}
+
+.content-header-block {
+  clear: both;
+  color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @extend .neomorf;
+  background-color: #00408d;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMDMzNzQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwNGNhNSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(
+    linear,
+    0% 0%,
+    100% 100%,
+    color-stop(0, rgb(0, 51, 116)),
+    color-stop(1, rgb(0, 76, 165))
+  );
+  /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(
+    top left,
+    rgb(0, 51, 116) 0%,
+    rgb(0, 76, 165) 100%
+  );
+  /* IE10+ */
+  background-image: repeating-linear-gradient(
+    to bottom right,
+    rgb(0, 51, 116) 0%,
+    rgb(0, 76, 165) 100%
+  );
+  background-image: -ms-repeating-linear-gradient(
+    top left,
+    rgb(0, 51, 116) 0%,
+    rgb(0, 76, 165) 100%
+  );
+}
+.article-section {
+  margin: 0rem 0;
+  padding: 1rem 2rem;
+  img {
+    border-radius: 1rem;
+  }
+}
+.article-header {
+  margin: 0 0 0rem;
+
+  > h2 {
+    margin-top: 0;
+  }
+}
+.article-holder {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  clear: both;
+  article {
+    @extend .neomorf;
+  }
+}
