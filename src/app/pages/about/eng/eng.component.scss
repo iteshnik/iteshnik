@@ -1,0 +1,31 @@
+@import "utils";
+.about-holder {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  margin: 1rem 2rem;
+  a {
+    color: #00408a;
+  }
+}
+.about-content {
+}
+.about-side {
+}
+.about-nav {
+  ul {
+    font-size: larger;
+    list-style: none;
+    li {
+      margin: 0.5rem 0;
+      &:before {
+        content: "—";
+        margin-right: 5px;
+      }
+      a {
+        color: #00408a;
+      }
+    }
+  }
+}

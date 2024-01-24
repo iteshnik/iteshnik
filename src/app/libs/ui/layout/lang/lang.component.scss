@@ -1,0 +1,28 @@
+@import "utils";
+
+.language {
+  ul {
+    text-align: right;
+    padding: 0;
+    li {
+      display: none;
+
+      a {
+        color: #ccc;
+      }
+      &.active {
+        display: inline;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.icon {
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+  margin: 0;
+  margin-left: 5px;
+}

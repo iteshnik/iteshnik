@@ -1,0 +1,10 @@
+@import "utils";
+
+.logo {
+  display: block;
+  a {
+    display: block;
+    text-indent: -9999px;
+    @extend .logo-img;
+  }
+}

@@ -1,0 +1,56 @@
+@import "utils";
+
+.shop-section {
+  .shop-holder {
+    max-width: 1280px;
+  }
+}
+.shop-catalog {
+  list-style: none;
+  padding: 0;
+  display: grid;
+
+  overflow: hidden;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  article {
+    text-align: center;
+    padding: 1rem;
+    .catalog-title {
+      position: relative;
+      .title {
+        padding: 2rem;
+        margin: 0;
+        width: 100%;
+        height: 120px;
+
+        position: absolute;
+        top: 50%;
+        margin-top: -60px;
+
+        background-color: rgba(30, 30, 30, 0.9);
+        color: #fff;
+        font-size: x-large;
+      }
+      .img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+    .catalog-about {
+      font-size: smaller;
+    }
+    .btn {
+      font-size: smaller;
+    }
+  }
+}

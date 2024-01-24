@@ -1,0 +1,58 @@
+@import "utils";
+
+.album-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+
+  overflow: hidden;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  > li {
+    article {
+      h3 {
+        text-align: center;
+        a {
+          color: #00408a;
+        }
+      }
+    }
+  }
+}
+.photo-gallery {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  li {
+    padding: 0.25rem;
+    align-self: center;
+    img {
+      max-width: 120px;
+      max-height: 70px;
+    }
+  }
+}
+.see-all-photo {
+  text-align: right;
+  font-size: small;
+  a {
+    display: inline;
+    color: #00408a;
+    .icon {
+      margin-left: 5px;
+    }
+  }
+}

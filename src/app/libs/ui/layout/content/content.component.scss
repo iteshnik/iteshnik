@@ -1,0 +1,23 @@
+@import "utils";
+
+.container {
+  // @extend .neomorf;
+  box-shadow: 5px 5px 30px #ababab, -10px -10px 30px #eee;
+  padding: 0;
+  margin: 0em;
+  width: 100%;
+
+  @include media-breakpoint-only(md) {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  @include media-breakpoint-up(md) {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+.main-content {
+  margin: 0;
+  clear: both;
+  font-size: larger;
+}
