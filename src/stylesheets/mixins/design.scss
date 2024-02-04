@@ -1,17 +1,214 @@
-// .neomorf {
-//   border-radius: 1rem;
-//   background: linear-gradient(145deg, #f0f0f0, #cacaca);
-//   box-shadow: 10px 10px 30px #ababab, -10px -10px 30px #eee;
-//   padding: 1rem 2rem;
-// }
-.neomorf {
-  border-radius: 0;
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  //box-shadow: 5px 5px 15px #ababab, -5px -5px 15px #eee;
+$h-header: 120px;
+
+// MAIN
+
+$main-color: #0049ad;
+$main-color-achromatopsia: #565656;
+
+$main-bg-color-primary: $main-color;
+$main-bg-color-primary-tritanopia: #04827e;
+$main-bg-color-primary-tritanomaly: #02649b;
+$main-bg-color-primary-darker: #0e3d7d;
+
+$main-light-text-primary: #fff;
+$main-link-color: $main-color;
+$main-text-primary: $main-color-achromatopsia;
+
+$main-grey-primary: $main-color-achromatopsia;
+$main-grey-secondary: #b9b9b9;
+
+$main-bg-grey-primary: #ddddf1;
+$main-bg-grey-secondary: #f4f0ec;
+$main-bg-grey-darker: #b9b9b9;
+
+$main-shadow-color-primary: #9ea0ba;
+$main-shadow-color-secondary: #d2d2dc;
+$main-shadow-color-darker: #b9b9b9;
+
+$main-shadow-grey-primary: #e7e7e7;
+$main-shadow-grey-secondary: #f4f0ec;
+$main-shadow-grey-darker: #b9b9b9;
+
+// LIGHT
+
+$light-color: #ddddf1;
+$light-color-achromatopsia: #e7e7e7;
+
+$light-bg-color-primary: $light-color;
+$light-bg-color-primary-tritanopia: #04827e;
+$light-bg-color-primary-tritanomaly: #02649b;
+$light-bg-color-primary-darker: #a1a1d0;
+
+$light-bg-grey-primary: $light-color-achromatopsia;
+$light-bg-grey-secondary: #f4f0ec;
+$light-bg-grey-darker: #b9b9b9;
+
+$light-shadow-grey-primary: #dedef2;
+$light-shadow-grey-secondary: #f4f0ec;
+$light-shadow-grey-darker: #b9b9b9;
+
+// NEOMORF
+@mixin neomorf-shadow {
+  box-shadow: 5px 5px 1rem $main-shadow-color-primary,
+    -5px -5px 1rem $main-shadow-grey-primary;
+}
+@mixin neomorf-shadow-revers {
+  box-shadow: 5px 5px 1rem $main-shadow-color-primary,
+    -5px -5px 1rem $main-shadow-grey-primary;
+}
+
+@mixin neomorf-shadow-text {
+  text-shadow: $main-light-text-primary 2px 2px 1rem;
+}
+@mixin neomorf-bg {
+  background: linear-gradient(
+    -30deg,
+    $light-bg-grey-secondary,
+    $light-bg-grey-primary
+  );
+}
+@mixin neomorf-bg-reverse {
+  background: linear-gradient(
+    150deg,
+    $light-bg-grey-secondary,
+    $light-bg-grey-primary
+  );
+}
+@mixin neomorf-border5 {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+@mixin neomorf-border10 {
   padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+@mixin neomorf-border15 {
+  padding: 1.5rem 3rem;
+  border-radius: 1.5rem;
+}
+@mixin neomorf-bg-revers {
+  background: linear-gradient(
+    -30deg,
+    $light-bg-grey-secondary,
+    $light-bg-grey-primary
+  );
+}
+////// NEOMORF body
+@mixin neomorf-bg-body {
+  background: linear-gradient(
+    180deg,
+    $light-bg-color-primary,
+    $light-bg-color-primary 20%,
+    $light-bg-color-primary,
+    $light-bg-color-primary 100%
+  );
+}
+////// NEOMORF body
+///
+////// NEOMORF Header
+@mixin neomorf-bg-header {
+  background-color: $main-bg-color-primary;
+
+  background: linear-gradient(
+      0deg,
+      rgba($main-bg-color-primary, 1) 50%,
+      rgba($main-bg-color-primary, 0) 100%
+    ),
+    linear-gradient(
+      180deg,
+      $main-bg-color-primary-tritanomaly,
+      rgba($main-bg-color-primary-tritanomaly, 0)
+    ),
+    linear-gradient(
+      200deg,
+      rgba($main-bg-color-primary-tritanomaly, 1),
+      rgba($main-bg-color-primary-tritanomaly, 0) 70%
+    ),
+    linear-gradient(
+      160deg,
+      rgba($main-bg-color-primary-darker, 1),
+      rgba($main-bg-color-primary-darker, 0) 70%
+    );
+}
+////// NEOMORF Header
+///
+////// NEOMORF CONTENT
+@mixin neomorf-bg-content {
+  background: linear-gradient(
+    180deg,
+    $light-bg-color-primary,
+    $light-bg-color-primary 30%,
+    $light-bg-color-primary,
+    $light-bg-grey-secondary 100%
+  );
+}
+
+@mixin neomorf-shadow-content {
+  box-shadow: 5px 5px 1rem $main-shadow-color-primary,
+    -5px -5px 1rem $main-shadow-grey-primary;
+}
+////// NEOMORF CONTENT
+///
+////// NEOMORF 3color
+@mixin bg-3color {
+  background-color: $main-grey-primary;
+
+  background: linear-gradient(
+      180deg,
+      rgba($main-bg-color-primary, 1),
+      rgba($main-bg-color-primary, 0) 50%
+    ),
+    linear-gradient(
+      0deg,
+      $light-bg-color-primary,
+      $light-bg-color-primary 5%,
+      rgba($light-bg-color-primary, 0),
+      $light-bg-color-primary 100%
+    ),
+    linear-gradient(
+      290deg,
+      rgba($main-bg-color-primary-tritanopia, 0.9),
+      rgba($main-bg-color-primary-tritanopia, 0) 70%
+    ),
+    linear-gradient(
+      70deg,
+      rgba($main-bg-color-primary-darker, 1),
+      rgba($main-bg-color-primary-darker, 0) 70%
+    ),
+    linear-gradient($main-grey-primary, $main-grey-primary);
+}
+////// NEOMORF 3color
+///
+///
+///
+////// NEOMORF BUTTONS
+
+.btn {
+  background-color: $main-bg-color-primary;
+  background: linear-gradient(
+    45deg,
+    rgba($main-bg-color-primary, 1),
+    rgba($main-bg-color-primary-tritanomaly, 0.7) 50%,
+    rgba($main-bg-color-primary, 1) 100%
+  );
+  margin: 1rem;
+  padding: 1rem 3rem;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 300% auto;
+  color: $light-color;
+
+  @include neomorf-shadow;
+  border-radius: 1rem;
+  display: block;
+  text-decoration: none;
+  &:hover {
+    background-position: right center;
+    color: $light-color-achromatopsia;
+  }
 }
 .tagbtn {
-  background-image: linear-gradient(to right, #ccc 0%, #eee 51%, #ccc 100%);
+  background-image: linear-gradient(to right, #ccc 0%, #eee 50%, #ccc 100%);
   padding: 0.3rem 1rem;
   text-align: center;
   transition: 0.5s;
@@ -25,6 +222,7 @@
     background-position: right center; /* change the direction of the change here */
   }
 }
+////// NEOMORF BUTTONS
 .logo-img {
   width: 235px;
   height: 40px;

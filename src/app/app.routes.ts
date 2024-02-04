@@ -50,14 +50,14 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: AboutComponent,
+        component: DeuComponent,
         children: [
           // routes
         ],
       },
       {
         path: 'about',
-        component: AboutComponent,
+        component: DeuComponent,
         children: [],
       },
       {

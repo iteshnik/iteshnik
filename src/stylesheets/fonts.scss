@@ -1,2 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+// <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 100 to 900
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.roboto-slab-thin {
+  font-family: "Roboto Slab", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-slab-light {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-slab-regular {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-slab-medium {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-slab-bold {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-slab-black {
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Базовый размер шрифта */
+html,
+body {
+  font-size: 16px;
+  line-height: 16px;
+  @extend .roboto-regular;
+  * {
+    line-height: 1.3em;
+  }
+  /* Заголовки */
+  h1 {
+    font-size: 2em; /* Например, 32px для базового размера 16px */
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0 0 0.5em;
+    letter-spacing: 1px;
+    @extend .roboto-slab-regular;
+  }
+
+  h2 {
+    font-size: 1.5em; /* Например, 24px для базового размера 16px */
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0 0 0.6em;
+    @extend .roboto-slab-regular;
+  }
+  h3 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding: 0;
+    margin: 0 0 0.7em;
+    @extend .roboto-slab-regular;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.3em;
+    margin: 0 0 0.3em;
+  }
+
+  /* Медиа запросы для различных устройств */
+  @media only screen and (max-width: 600px) {
+    /* Мобильные устройства */
+    body {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    h2 {
+      font-size: 1.4em;
+    }
+    h3 {
+      font-size: 1.1em;
+    }
+    p {
+    }
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Планшеты */
+    body {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    h1 {
+      font-size: 2.2em;
+    }
+    h2 {
+      font-size: 1.8em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+
+  /* Для экранов компьютеров */
+  @media only screen and (min-width: 1025px) {
+    body {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+}

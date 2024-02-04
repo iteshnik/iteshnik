@@ -8,12 +8,13 @@
       display: none;
 
       a {
-        color: #ccc;
+        color: $main-light-text-primary;
+        @include neomorf-shadow-text;
       }
       &.active {
         display: inline;
         a {
-          color: #fff;
+          color: $main-light-text-primary;
         }
       }
     }

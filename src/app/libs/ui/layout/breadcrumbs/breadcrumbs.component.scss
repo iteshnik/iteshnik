@@ -3,7 +3,7 @@
 .breadcrumbs {
   margin: 0;
 
-  @extend .neomorf;
+  @include neomorf-bg;
   background: none;
   ol {
     list-style: none;

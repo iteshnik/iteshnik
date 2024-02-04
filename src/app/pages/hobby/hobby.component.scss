@@ -1,1 +1,31 @@
 @import "utils";
+
+.album-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+
+  overflow: hidden;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  > li {
+    article {
+      h3 {
+        text-align: center;
+        a {
+          color: #00408a;
+        }
+      }
+    }
+  }
+}

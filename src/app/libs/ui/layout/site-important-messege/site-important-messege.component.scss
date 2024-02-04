@@ -1,0 +1,71 @@
+.site-important-messege {
+  padding: 0rem 0rem 2rem;
+  blockquote {
+    font-size: 0.9em;
+    border-radius: 1rem;
+
+    @include neomorf-shadow;
+    @include neomorf-bg;
+
+    padding: 2rem;
+    margin: 0 auto;
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+
+    gap: 0.5rem 1rem;
+    grid-template-areas:
+      "avatar header header"
+      "messege messege messege";
+    @include media-breakpoint-up(sm) {
+      width: 80%;
+      margin: 2rem auto;
+
+      display: grid;
+      grid-template-columns: 100px calc((100% - 100px) / 2) calc(
+          (100% - 100px) / 2
+        );
+      gap: 0px 1rem;
+      grid-template-areas:
+        "avatar header header"
+        "avatar messege messege";
+    }
+    .avatar {
+      grid-area: avatar;
+    }
+    .header {
+      grid-area: header;
+    }
+    .messege {
+      grid-area: messege;
+    }
+
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .avatar {
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        @include media-breakpoint-up(sm) {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+    .messege {
+      p {
+        margin: 0.3rem 0;
+        line-height: 1.2em;
+      }
+      .header {
+        font-size: 0.9em;
+      }
+    }
+  }
+}

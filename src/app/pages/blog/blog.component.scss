@@ -35,7 +35,7 @@
     }
     &.active {
       a {
-        color: #fff;
+        color: $main-light-text-primary;
         background-image: linear-gradient(
           to right,
           #00408a 0%,

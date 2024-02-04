@@ -1,7 +1,8 @@
 @import "utils";
 a {
-  color: #fff;
+  color: $main-light-text-primary;
+  @include neomorf-shadow-text;
 }
 .icon {
-  color: #fff;
+  color: $main-light-text-primary;
 }

@@ -1,8 +1,12 @@
 @import "utils";
 
+.content {
+  background: transparent;
+}
 .container {
-  // @extend .neomorf;
-  box-shadow: 5px 5px 30px #ababab, -10px -10px 30px #eee;
+  @include neomorf-shadow-content;
+  // @include neomorf-bg-content;
+
   padding: 0;
   margin: 0em;
   width: 100%;
@@ -11,7 +15,7 @@
     margin: 0 auto;
     max-width: 90%;
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     margin: 0 auto;
     max-width: 1200px;
   }
